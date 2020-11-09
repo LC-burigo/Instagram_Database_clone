@@ -38,8 +38,10 @@ class Instagram_Database_Clone:
         print(self.Cursor.rowcount, "ok")
 
     def Insert_Many_into_follows(self, content):
-        insert = "INSERT INTO follows(follower_id, followee_id) VALUES(%S, %S);"
-        datas = content
+        datas = []
+        insert = "INSERT INTO follows(follower_id, followee_id) VALUES(%s, %s);"
+        for element in content:
+            datas.append(element)
         self.Cursor.executemany(insert, datas)
         self.Connection.commit()
         print(self.Cursor.rowcount, "ok")
@@ -155,7 +157,6 @@ class Instagram_Database_Clone:
         self.Connection.commit()
         for x in self.Cursor:
             print(x)
-
 
 
 operations = Instagram_Database_Clone()
