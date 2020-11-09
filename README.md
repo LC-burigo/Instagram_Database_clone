@@ -5,7 +5,7 @@ The explanation of this project will be divides in 3 parts:
 2. Functions
 3. Packages and Programs
 
-* **Databases**
+* **Tables**
 <img src="Instagram_clone_diagram.png" width=400 border=blue>
 
 
