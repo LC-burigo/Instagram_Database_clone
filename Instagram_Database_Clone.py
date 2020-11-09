@@ -37,6 +37,13 @@ class Instagram_Database_Clone:
         self.Connection.commit()
         print(self.Cursor.rowcount, "ok")
 
+    def Insert_Many_into_follows(self, content):
+        insert = "INSERT INTO follows(follower_id, followee_id) VALUES(%S, %S);"
+        datas = content
+        self.Cursor.executemany(insert, datas)
+        self.Connection.commit()
+        print(self.Cursor.rowcount, "ok")
+
     def Insert_Into_tags(self, tags):
         insert = "INSERT INTO tags(tag_name) VALUES('{}');".format(tags)
         self.Cursor.execute(insert)
@@ -152,4 +159,4 @@ class Instagram_Database_Clone:
 
 
 operations = Instagram_Database_Clone()
-operations.Users_Most_Commenter()
+operations.Insert_Many_into_follows([(1, 2), (1, 3)])
