@@ -10,7 +10,7 @@ The explanation of this project will be divides in 3 parts:
 
 
 * **Functionalities**
-  1. Insert a data to any table 
+  1. Insert a data or many data in once to any table 
   2. Delete a data from any table
   3. Find the five oldest users registrated in the system
   4. Find the most common day for people to register
