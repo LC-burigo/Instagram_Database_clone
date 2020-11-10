@@ -1,6 +1,6 @@
 # Instagram_Database_clone
 ### In this repository, you can see an attempt to make a kind of instagram database with some operations!!!
-The explanation of this project will be divid in 3 parts:
+The explanation of this project will be divide in 3 parts:
 1. Tables databases flow chart
 2. Functions
 3. Packages and Programs
