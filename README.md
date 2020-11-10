@@ -5,7 +5,7 @@ The explanation of this project will be divides in 3 parts:
 2. Functions
 3. Packages and Programs
 
-1) **Tables**
+1) **Diagram**
 <img src="Instagram_clone_diagram.png" width=400 border=blue>
 
 
@@ -20,16 +20,97 @@ The explanation of this project will be divides in 3 parts:
       >photo_tags 
       
   2. Delete a data from any table
+      >users \
+      >photos \
+      >likes \
+      >comments \
+      >follows \
+      >tags \
+      >photo_tags   
+      
   3. Find the five oldest users registrated in the system
+  
+      Id| username | create_at|
+      -----|-------|-----------|
+      80|Darby_Herzog|2016-05-06 00:14:21|
+      67|Emilio_Bernier52|2016-05-06 13:04:30|
+      63|Elenor88|2016-05-08 01:30:41|
+      95|Nicole71|2016-05-09 17:30:22|
+      38|Jordyn.Jacobson2|2016-05-14 07:56:26|
+      
   4. Find the most common day for people to register
-  5. Find the users who do not post a photo (inactive)
+      
+      Day| Registrations |
+      -----|-------|
+      Sunday|17|
+       
+  5. Find the users who do not post a single photo (inactive)
+      
+      username| 
+      -----|
+      Aniya_Hackett|
+      Bartholome.Bernhard|
+      Bethany20|
+      Darby_Herzog|
+      David.Osinski47|
+      Duane60|
+      Esmeralda.Mraz57|
+      Esther.Zulauf61|
+      Franco_Keebler64|
+      Hulda.Macejkovic|
+      Jaclyn81|
+      Janelle.Nikolaus81|
+      Jessyca_West|
+      Julien_Schmidt|
+      Kasandra_Homenick|
+      Leslie67|
+      Linnea59|
+      Lucas_Burigo|
+      Maxwell.Halvorson|
+      Mckenna17|
+      Mike.Auer39|
+      Morgan.Kassulke|
+      Nia_Haag|
+      Ollie_Ledner37|
+      Pearl7
+      Rocio33|
+      Samuel_Noll|
+      Tierra.Trantow|
+      
   6. Find the photos with more likes
+      
+      Image_url| photo_id | total_likes|
+      -----|-------|-----------|
+      https://jarret.name|145|48|
+      
   7. Bring the count of Photos per users
+      
+      photo_per_user| 
+      -----|
+      2.5196|
+      
   8. Select the most commom tags
+  
+      tag_name| total |
+      -----|-------|
+      smile|58|
+      party|38|
+      lol|24|
+      fun|37|
+      beach|42|
+      
   9. Select the users that are the most likers
+  
+      username| total_likes |
+      --------|-------------|
+      Aniya_Hackett|257|
+      
   10. Select the users who comment the most
   
-  
+      username| total|
+      --------|-------------|
+      Aniya_Hackett|258|
+      
 3) **What you have to download**
 
 MySQL Workbench | 
