@@ -5,11 +5,11 @@ The explanation of this project will be divides in 3 parts:
 2. Functions
 3. Packages and Programs
 
-* **Tables**
+1) **Tables**
 <img src="Instagram_clone_diagram.png" width=400 border=blue>
 
 
-* **Functionalities**
+2) **Functionalities**
   1. Insert a data or many data in once to any table 
   2. Delete a data from any table
   3. Find the five oldest users registrated in the system
@@ -22,7 +22,7 @@ The explanation of this project will be divides in 3 parts:
   10. Select the users who comment the most
   
   
-* **What you have to download**
+3) **What you have to download**
 
 MySQL Workbench | 
 ------------ |
