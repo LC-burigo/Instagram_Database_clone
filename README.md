@@ -105,12 +105,15 @@ The explanation of this project will be divides in 3 parts:
       --------|-------------|
       Aniya_Hackett|257|
       
+      :pushpin:**OBS:** I add one more like from this user, to make her have 257 likes
+      
   10. Select the users who comment the most
   
       username| total|
       --------|-------------|
       Aniya_Hackett|258|
       
+      :pushpin:**OBS:** I add two more comments from this user, to make her have 258 comments
 3) **What you have to download**
 
 MySQL Workbench | 
