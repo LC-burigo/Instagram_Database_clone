@@ -125,4 +125,4 @@ Pymysql |
 [pip install PyMySQL](https://pypi.org/project/PyMySQL/) | 
 
 :pushpin:**OBS:** I didn't do all the functions you can imagine, because that would be a lot. :sweat_smile:\
-                  So, take a good look, understand how to make this connection python-Mysql, learn how do some things with the database, and be happy!:nerd_face:
+                  So, take a good look, understand how to make this connection python-Mysql, learn how todo somethings with the database, and be happy!:nerd_face:
