@@ -1,6 +1,6 @@
 # Instagram_Database_clone
 ### In this repository, you can see an attempt to make a kind of instagram database with some operations!!!
-The explanation of this project will be divides in 3 parts:
+The explanation of this project will be divid in 3 parts:
 1. Tables databases flow chart
 2. Functions
 3. Packages and Programs
@@ -10,7 +10,7 @@ The explanation of this project will be divides in 3 parts:
 
 
 2) **Functionalities**
-  1. Insert a data or many data in once to any table 
+  1. Insert a data or many datas in once to any table 
       >users \
       >photos \
       >likes \
@@ -44,7 +44,7 @@ The explanation of this project will be divides in 3 parts:
       -----|-------|
       Sunday|17|
        
-  5. Find the users who do not post a single photo (inactive)
+  5. Find the users who didn´t posted a single photo (inactive)
       
       username| 
       -----|
@@ -99,7 +99,7 @@ The explanation of this project will be divides in 3 parts:
       fun|37|
       beach|42|
       
-  9. Select the users that are the most likers
+  9. Select the users which like more photos
   
       username| total_likes |
       --------|-------------|
@@ -114,6 +114,7 @@ The explanation of this project will be divides in 3 parts:
       Aniya_Hackett|258|
       
       :pushpin:**OBS:** I add two more comments from this user, to make her have 258 comments
+      
 3) **What you have to download**
 
 MySQL Workbench | 
