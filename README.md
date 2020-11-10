@@ -11,6 +11,14 @@ The explanation of this project will be divides in 3 parts:
 
 2) **Functionalities**
   1. Insert a data or many data in once to any table 
+      >users \
+      >photos \
+      >likes \
+      >comments \
+      >follows \
+      >tags \
+      >photo_tags 
+      
   2. Delete a data from any table
   3. Find the five oldest users registrated in the system
   4. Find the most common day for people to register
