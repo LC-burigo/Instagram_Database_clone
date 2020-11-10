@@ -13,7 +13,7 @@ class Instagram_Database_Clone:
         self.Connection.commit()
         print(self.Cursor.rowcount, "ok")
 
-    def Insert_Into_photo(self, image, user_id):
+    def Insert_Into_photos(self, image, user_id):
         insert = "INSERT INTO photos(image_url, user_id) VALUES('{}', {});".format(image, user_id)
         self.Cursor.execute(insert)
         self.Connection.commit()
@@ -110,21 +110,33 @@ class Instagram_Database_Clone:
             print(x)
 
     def More_Registration_Day(self):
-        get = "SELECT username, dayname(created_at) as day, COUNT(*) as registrations FROM users GROUP BY day ORDER BY registrations DESC LIMIT 1;"
+        get = "SELECT \
+                    username,\
+                    dayname(created_at) as day,\
+                    COUNT(*) as registrations \
+                        FROM users GROUP BY day ORDER BY registrations DESC LIMIT 1;"
         self.Cursor.execute(get)
         self.Connection.commit()
         for x in self.Cursor:
             print(x)
 
     def Inactive_Users(self):
-        get = "SELECT username FROM users left join photos on users.id = photos.user_id WHERE photos.user_id is null ORDER BY username;"
+        get = "SELECT \
+                    username \
+                        FROM users left join photos on users.id = photos.user_id WHERE photos.user_id is null \
+                                ORDER BY username;"
         self.Cursor.execute(get)
         self.Connection.commit()
         for x in self.Cursor:
             print(x)
 
     def Photo_With_More_Likes(self):
-        get = "SELECT image_url, photo_id, COUNT(*) as total_likes from photos JOIN likes ON photos.id = likes.photo_id GROUP BY photo_id ORDER BY total_likes DESC LIMIT 1;"
+        get = "SELECT \
+                    image_url, \
+                    photo_id, \
+                    COUNT(*) as total_likes \
+                        from photos JOIN likes ON photos.id = likes.photo_id \
+                                GROUP BY photo_id ORDER BY total_likes DESC LIMIT 1;"
         self.Cursor.execute(get)
         self.Connection.commit()
         for x in self.Cursor:
@@ -138,21 +150,33 @@ class Instagram_Database_Clone:
             print(x)
 
     def Most_Common_Tags(self):
-        get = "SELECT tag_name, COUNT(*) as total FROM photo_tags left JOIN tags ON photo_tags.tag_id = tags.id GROUP BY tag_name ORDER BY total DESC limit 5;"
+        get = "SELECT \
+                    tag_name, \
+                    COUNT(*) as total \
+                            FROM photo_tags left JOIN tags ON photo_tags.tag_id = tags.id \
+                                    GROUP BY tag_name ORDER BY total DESC limit 5;"
         self.Cursor.execute(get)
         self.Connection.commit()
         for x in self.Cursor:
             print(x)
 
     def Users_Most_Likers(self):
-        get = "SELECT username, COUNT(*) as total_likes FROM users RIGHT JOIN likes ON users.id = likes.user_id GROUP BY username HAVING total_likes = 257;"
+        get = "SELECT \
+                    username, \
+                    COUNT(*) as total_likes \
+                        FROM users RIGHT JOIN likes ON users.id = likes.user_id \
+                                GROUP BY username HAVING total_likes = 257;"
         self.Cursor.execute(get)
         self.Connection.commit()
         for x in self.Cursor:
             print(x)
 
     def Users_Most_Commenter(self):
-        get = "select username, COUNT(*) as total from comments LEFT JOIN users ON comments.user_id = users.id GROUP BY username HAVING total = 258;"
+        get = "select \
+                    username, \
+                    COUNT(*) as total \
+                            from comments LEFT JOIN users ON comments.user_id = users.id \
+                                    GROUP BY username HAVING total = 258;"
         self.Cursor.execute(get)
         self.Connection.commit()
         for x in self.Cursor:
@@ -160,4 +184,4 @@ class Instagram_Database_Clone:
 
 
 operations = Instagram_Database_Clone()
-operations.Insert_Many_into_follows([(1, 2), (1, 3)])
+operations.The_Five_Longest()
