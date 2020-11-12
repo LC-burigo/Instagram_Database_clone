@@ -115,6 +115,9 @@ The explanation of this project will be divide in 3 parts:
       
       :pushpin:**OBS:** I add two more comments from this user, to make her have 258 comments
       
+  11. Create a trigger that doesn´t allow the follower follow himself
+  
+      
 3) **What you have to download**
 
 MySQL Workbench | 
