@@ -6,6 +6,24 @@ class Instagram_Database_Clone:
         self.Connection = Connection = pymysql.connect(host='localhost', user='root', password='9479854532441919Lb', db='instagram_clone')
         self.Cursor = Connection.cursor()
 
+    # Trigger !!!
+    def Trigger(self):
+        get = "DELIMITER $$ \
+                CREATE TRIGGER cannot_self_follow \
+                        BEFORE INSERT ON follows FOR EACH ROW \
+                        BEGIN \
+                            IF NEW.follower_id = NEW.followee_id \
+                            THEN \
+                                SIGNAL SQLSTATE '45000' \
+                                SET MESSAGE_TEXT = 'Cannot follow yourself'; \
+                            END IF; \
+                        END; \
+              $$ \
+              DELIMITER ;"
+        self.Cursor.execute(get)
+        self.Connection.commit()
+        print(self.Cursor.rowcount, "ok")
+
     # Insert section
     def Insert_Into_users(self, name):
         insert = "INSERT INTO users(username) VALUES('{}');".format(name)
@@ -184,4 +202,4 @@ class Instagram_Database_Clone:
 
 
 operations = Instagram_Database_Clone()
-operations.The_Five_Longest()
+operations.Trigger()
